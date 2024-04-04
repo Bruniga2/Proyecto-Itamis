@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #e0e0e0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #222222;
+  }
+  /* Estilos para la barra superior */
+  .location-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .location-dropdown .location {
+    cursor: pointer;
+  }
+  .location-dropdown i {
+    margin-left: 5px;
+  }
+  
+  .location-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .location-menu a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .location-dropdown:hover .location-menu {
+    display: block;
+    
+  }
+  .top-bar {
+    background-color: #000;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .top-bar-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .heineken-blade {
+    background-color: #ff6600;
+    padding: 5px 10px;
+  }
+  
+  /* Estilos para el encabezado principal */
+  .main-header {
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  form input {
+    padding: 5px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+  }
+  
+  .icons a {
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  /* Estilos para la barra de navegación */
+  nav {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .dropdown-menu {
+    background-color: #444;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .dropdown-menu a {
+    color: #fff;
+  }
+  
+  .dropdown:hover > a {
+    border-bottom: 2px solid #ff6600;
+  }
+  
+  /* Estilos para el carrusel */
+  .carousel-indicators button {
+    background-color: #fff;
+  }
+  
+  /* Estilos para el banner */
+  .banner {
+    height: 300px;
+    background-image: url("imagen-banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Estilos para los títulos de sección */
+  .section-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Estilos para las tarjetas de productos */
+  .products {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  
+  .product-card {
+    background-color: #333333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .product-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .load-more:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Estilos para el carrusel de recetas */
+  .recipes-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .recipes-carousel .recipe-item {
+    background-color: #333333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .recipes-carousel .recipe-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .recipes-carousel .recipe-item h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .recipes-carousel .recipe-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .recipes-carousel .recipe-item button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recipes-carousel .recipe-item button:hover {
+    background-color: #3e8e41;
+  }
+  /* Estilos para el pie de página */
+  footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  .recipe-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .recipe-item {
+    background-color: #444;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    flex: 0 0 300px;
+  }
+  
+  .recipe-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .recipe-item h2 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .recipe-item p {
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  
+  .recipe-item button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .recipe-item button:hover {
+    background-color: #e65c00;
+  }
+  
+  .subscribe-section {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .subscribe-content img {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .subscribe-content h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .subscribe-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  .subscribe-content small {
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .subscribe-content input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    width: 60%;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .subscribe-content button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  
+  .footer-col {
+    flex-basis: 25%;
+    margin-bottom: auto;
+  }
