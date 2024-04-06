@@ -176,12 +176,14 @@ nav a {
 }
 
 .carousel {
-  max-width: 1450px; 
-  margin: auto; 
+  max-width: 1450px;   /*   para el tamaño del carrusel*/
+  margin: auto;
 }
 
 .carousel-inner {
   text-align: center; 
+  border-radius: 20px;
+  max-height: 440px;
 }
 
 .carousel-item img {
@@ -189,14 +191,18 @@ nav a {
   max-width: 100%; 
 }
 
-/* Estilos para el banner */
+/* Estilos para el banner   960 360 */
 .banner {
-  height: 300px;
-  background-image: url("imagen-banner.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
+
+.banner img{
+  border-radius: 20px;
+}
+
 
 /* Estilos para los títulos de sección */
 .section-title {
@@ -206,6 +212,8 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+
 
 /* Estilos para las tarjetas de productos */
 .products {
@@ -218,7 +226,7 @@ nav a {
 }
 
 .product-card {
-  background-color: #333333;
+  background-color: #5d5c5c;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
@@ -259,6 +267,8 @@ nav a {
   background-color: #ff6600;
 }
 
+
+
 /* Estilos para el carrusel de recetas */
 .recipes-carousel {
   max-width: 100000px;
@@ -292,7 +302,7 @@ nav a {
 
 
 
-/*               boton*/
+/*  boton*/
 .recipes-carousel .recipe-item button {
   background-color: #ff6600;
   color: #fff;
@@ -308,7 +318,6 @@ nav a {
 }
 
 .recipes-carousel .recipe-item button:hover {
-  
 background-color: #ff6600;
 }
 
@@ -436,30 +445,36 @@ footer {
   margin-bottom: auto;
 }
 
+.footer-col1 a{
+  color: #ededed; 
+  text-decoration: none; 
+  text-transform: uppercase;
+}
+
 
 
 
 
 /*    titulo de recetas */
 .recipe-title {
-  position: relative; /* Establece posición relativa para que puedas moverlo */
-  top: -20px; /* Mueve el título hacia abajo 50px desde su posición original */
-  left: 0px; /* Mueve el título hacia la derecha 20px desde su posición original */
+  position: relative; 
+  text-align: center;
+  top: -20px; 
   color: #ff6600;
-  font-size: 36px; /* Tamaño de fuente */
-  font-weight: 800; /* Peso de la fuente */
+  font-size: 36px; 
+  font-weight: 800; 
 }
 
 
 
 /* Estilo para el título "NUESTRAS RECETAS" dentro de la sección de recetas */
 .ofertas-title {
-  position: relative; /* Establece posición relativa para que puedas moverlo */
-  top: -20px; /* Mueve el título hacia abajo 50px desde su posición original */
-  left: 188px; /* Mueve el título hacia la derecha 20px desde su posición original */
-  color: #ff6600; /* Color del texto */
-  font-size: 36px; /* Tamaño de fuente */
-  font-weight: bold; /* Peso de la fuente */
+  position: relative; 
+  text-align: center;
+  top: -20px; 
+  color: #ff6600; 
+  font-size: 36px; 
+  font-weight: bold;
 }
 
 
@@ -472,4 +487,136 @@ footer {
       transform: scale(1) rotate(0);
   }
 }
+
+
+
+
+
+
+/*  pagina servezasss*/
+.beer-section {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.beer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.beer-filters {
+  display: flex;
+  align-items: center;
+}
+
+.beer-filters select {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.beer-sort {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.beer-sort span {
+  margin-right: 5px;
+}
+
+.beer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+}
+
+.beer-card {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.beer-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.beer-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.beer-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.beer-price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.add-to-cart {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #e65c00;
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.load-more button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.load-more button:hover {
+  background-color: #e65c00;
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.load-more button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.load-more button:hover {
+  background-color: #e65c00;
+}
+
 
