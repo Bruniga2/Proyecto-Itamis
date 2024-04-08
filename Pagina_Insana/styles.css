@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    font-family: "Chivo Mono", monospace;
-    margin: 0;
+  font-family: "Chivo Mono", monospace;
+  margin: 0;
 }
 
 * {
@@ -13,9 +13,151 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #222222;
 }
+
+/*barra superior*/
+.top-bar {
+  background-color: #000;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 10px;
+}
+
+.top-bar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.unete {
+  background-color: #ff6600;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+
+/* LOGOS Y NOMBRE PRINCIPAL */
+.logoinsano{
+  overflow: hidden;
+  flex: 0 0 auto; 
+  
+}
+
+.logoinsano img {
+  overflow: hidden; 
+  width: 100%;
+  animation: giro 3s linear 6s infinite
+  
+}
+
+
+#principal {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  flex: 1;
+  height: 60px;
+}
+
+#principal a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  animation: giro 3s linear 6s infinite, brillo 3s linear 6s infinite;
+  
+}
+
+/* animacion logo */
+@keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(0.5deg);
+  }
+
+  20% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+
+}
+
+@keyframes brillo {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilos para el encabezado principal */
+.main-header {
+  background-color: #000;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+form {
+  height: 35px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  text-align: center;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  max-width: 350px;
+
+}
+
+.icons{
+  margin-left: 20px;
+  
+}
+.icons a {
+  color: #fff;
+  margin-left: 10px;
+  flex: 0 0 auto;
+}
+
+.location-menu {
+  display: none;
+  position: absolute;
+  background-color: #010101;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.location-menu a {
+  color: #e2dddd;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
 /* Estilos para la barra superior */
 .location-dropdown {
   position: relative;
@@ -27,38 +169,23 @@ body {
 }
 
 .location-dropdown i {
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
-.location-menu {
-  display: none;
-  position: absolute;
-  background-color: #010101;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
 
-.location-menu a {
-  color: #e2dddd;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
 
 .location-dropdown:hover .location-menu {
   display: block;
 }
-
-
-
 
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
+/* barra de opciones */
 .dropdown-menu {
+  top: 35px;
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -80,67 +207,7 @@ body {
 
 
 
-#principal {
-  display: flex;
-  align-items: center; 
-  padding: 10px; 
-  
-  border-radius: 5px; 
-}
 
-#principal a {
-  font-size: 34px; 
-  color: #fff; 
-  text-decoration: none; 
-  text-transform: uppercase;
-  animation: logo 8s linear 1s infinite; 
-}
-
-/*                                    */
-.top-bar {
-  background-color: #000;
-  padding: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-bar-links a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-.heineken-blade {
-  background-color: #ff6600;
-  padding: 5px 10px;
-}
-
-/* Estilos para el encabezado principal */
-.main-header {
-  background-color: #000;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-.logo {
-  font-size: 24px;
-}
-
-form input {
-  padding: 5px;
-  background-color: #000000;
-  color: #fff;
-  border: none;
-}
-
-.icons a {
-  color: #fff;
-  margin-left: 10px;
-}
 
 /* Estilos para la barra de navegación */
 nav {
@@ -148,6 +215,9 @@ nav {
   display: flex;
   justify-content: center;
   height: 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
 }
 
 nav a {
@@ -166,7 +236,7 @@ nav a {
   color: #fff;
 }
 
-.dropdown:hover > a {
+.dropdown:hover>a {
   border-bottom: 2px solid #ff6600;
 }
 
@@ -176,19 +246,20 @@ nav a {
 }
 
 .carousel {
-  max-width: 1450px;   /*   para el tamaño del carrusel*/
+  max-width: 1450px;
+  /*   para el tamaño del carrusel*/
   margin: auto;
 }
 
 .carousel-inner {
-  text-align: center; 
+  text-align: center;
   border-radius: 20px;
   max-height: 440px;
 }
 
 .carousel-item img {
-  display: inline-block; 
-  max-width: 100%; 
+  display: inline-block;
+  max-width: 100%;
 }
 
 /* Estilos para el banner   960 360 */
@@ -199,7 +270,7 @@ nav a {
 
 }
 
-.banner img{
+.banner img {
   border-radius: 20px;
 }
 
@@ -318,7 +389,7 @@ nav a {
 }
 
 .recipes-carousel .recipe-item button:hover {
-background-color: #ff6600;
+  background-color: #ff6600;
 }
 
 
@@ -445,9 +516,9 @@ footer {
   margin-bottom: auto;
 }
 
-.footer-col1 a{
-  color: #ededed; 
-  text-decoration: none; 
+.footer-col1 a {
+  color: #ededed;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -457,38 +528,25 @@ footer {
 
 /*    titulo de recetas */
 .recipe-title {
-  position: relative; 
+  position: relative;
   text-align: center;
-  top: -20px; 
+  top: -20px;
   color: #ff6600;
-  font-size: 36px; 
-  font-weight: 800; 
+  font-size: 36px;
+  font-weight: 800;
 }
 
 
 
 /* Estilo para el título "NUESTRAS RECETAS" dentro de la sección de recetas */
 .ofertas-title {
-  position: relative; 
+  position: relative;
   text-align: center;
-  top: -20px; 
-  color: #ff6600; 
-  font-size: 36px; 
+  top: -20px;
+  color: #ff6600;
+  font-size: 36px;
   font-weight: bold;
 }
-
-
-/* ANIMACIONES */
-@keyframes logo {
-  50% {
-      transform: scale(1.05) rotate(-0.1deg);
-  }
-  100% {
-      transform: scale(1) rotate(0);
-  }
-}
-
-
 
 
 
@@ -603,6 +661,7 @@ footer {
 .load-more {
   text-align: center;
   margin-top: 30px;
+  max-width: 150px;
 }
 
 .load-more button {
@@ -617,6 +676,5 @@ footer {
 
 .load-more button:hover {
   background-color: #e65c00;
+  
 }
-
-
