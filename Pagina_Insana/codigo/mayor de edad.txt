@@ -1,0 +1,56 @@
+css_:
+.age-verification-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.age-verification-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.age-verification-buttons button {
+  margin: 0 10px;
+}
+
+
+
+html_:
+ <div class="cart-dropdown">
+    <div class="cart-header">
+      <h3>Carrito de Compras</h3>
+      <button class="close-cart">&times;</button>
+    </div>
+    <div class="cart-body">
+      <ul class="cart-items">
+
+
+
+
+js_:
+// Verificación de edad
+const ageVerificationModal = document.querySelector('.age-verification-modal');
+const ageYesButton = document.querySelector('.age-yes');
+const ageNoButton = document.querySelector('.age-no');
+
+window.addEventListener('load', () => {
+  ageVerificationModal.style.display = 'flex';
+});
+
+ageYesButton.addEventListener('click', () => {
+  ageVerificationModal.style.display = 'none';
+});
+
+ageNoButton.addEventListener('click', () => {
+  window.location.href = 'https://www.example.com'; // Redirige a una página apropiada
+});

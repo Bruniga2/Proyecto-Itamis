@@ -24,6 +24,8 @@
         <a href="#">SUSCRIPCIONES </a>
         <a href="#">|</a>
         <a href="#" class="unete">INSANO</a>
+        <a href="#">|</a>
+        <button class="login-btn">Iniciar Sesión</button>
       </div>
       <div class="location-dropdown">
         <span class="location">Alerce, de los Lagos</span>
@@ -44,24 +46,19 @@
         <a href="index.html">Bar Three Blacks</a>
       </div>
       <div class="icons">
-        <a href="#"><i class="fa fa-user"></i></a>
-        <a href="#"><i class="fa fa-shopping-cart"></i></a>
-      </div>
+        <a href="#" class="cart-icon">
+          <i class="fa fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
     </div>
+    </div>
+
+    
     <form >
       <input type="text" placeholder="¿Qué estás buscando?">
     </form>
 
     <nav>
-
-      <div class="dropdown">
-        <a href="#">OFERTAS</a>
-        <div class="dropdown-menu">
-          <a href="#">Envío rápido</a>
-          <a href="#">Servicio urgente</a>
-          <a href="#">Entrega exprés</a>
-        </div>
-      </div>
 
       <div class="dropdown">
         <a href="cervezas.html">CERVEZAS</a>
@@ -112,10 +109,66 @@
 
       <!-- Resto del código -->
     </nav>
+    </header>
 
-  </header>
+
+
+  
+
 
   <br>
+  <!-- carrito -->
+  <div class="cart-dropdown">
+    <div class="cart-header">
+      <h3>Carrito de Compras</h3>
+      <button class="close-cart">&times;</button>
+    </div>
+    <div class="cart-body">
+      <ul class="cart-item">
+        <!-- Elementos del carrito se agregarán aquí dinámicamente -->
+      </ul>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-price">$0.00</span>
+      </div>
+      <div class="cart-actions">
+        <a href="#" class="btn btn-checkout">Finalizar Compra</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- mayor de edad -->
+  <div class="age-verification-modal">
+    <div class="age-verification-content">
+      <h2>¿Eres mayor de edad?</h2>
+      <div class="age-verification-buttons">
+        <button class="age-yes">Sí</button>
+        <button class="age-no">No</button>
+      </div>
+    </div>
+  </div>
+   <!-- inicio de secion -->
+  
+   <div class="login-modal">
+       <div class="login-content">
+         <h2>Iniciar Sesión</h2>
+         <form class="login">
+           <input type="email" placeholder="Correo electrónico" required>
+           <input type="password" placeholder="Contraseña" required>
+           <button type="submit" class="btn btn-login">Iniciar Sesión</button>
+         </form>
+         <button class="btn btn-close">Cerrar</button>
+       </div>
+     </div>
+     <br>
+
+
 
   <section class="carrusel">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">

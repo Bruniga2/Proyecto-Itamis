@@ -1,0 +1,64 @@
+css_:
+.cart-dropdown {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.cart-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-body {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px; /* Ancho deseado del carrito */
+  max-height: 60vh; /* Altura máxima del cuerpo del carrito */
+  overflow-y: auto;
+  position: relative;
+}
+
+
+js_:
+// Carrito de compras
+const cartIcon = document.querySelector('.cart-icon');
+const cartDropdown = document.querySelector('.cart-dropdown');
+const closeCartButton = document.querySelector('.close-cart');
+
+cartIcon.addEventListener('click', () => {
+  cartDropdown.classList.add('show');
+});
+
+closeCartButton.addEventListener('click', () => {
+  cartDropdown.classList.remove('show');
+});
+
+
+
+html_:
+
+</ul>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-price">$0.00</span>
+      </div>
+      <div class="cart-actions">
+        <a href="#" class="btn btn-checkout">Finalizar Compra</a>
+      </div>
+    </div>
+  </div>
+
+
+  
