@@ -21,30 +21,40 @@ $(document).ready(function() {
 });
 
 
-// Carrito de compras
+// Carrito
 const cartIcon = document.querySelector('.cart-icon');
 const cartDropdown = document.querySelector('.cart-dropdown');
 const closeCartButton = document.querySelector('.close-cart');
 
-cartIcon.addEventListener('click', () => {
+function openCart() {
   cartDropdown.classList.add('show');
   cartDropdown.style.width = '400px'; // Aumentar el ancho del carrito
   cartDropdown.style.height = '500px'; // Aumentar la altura del carrito
-});
+}
 
-closeCartButton.addEventListener('click', () => {
+function closeCart() {
   cartDropdown.classList.remove('show');
   cartDropdown.style.width = '300px'; // Restablecer el ancho del carrito
   cartDropdown.style.height = '400px'; // Restablecer la altura del carrito
+}
+
+// abrir y cerrar el carrito con click
+cartIcon.addEventListener('click', () => {
+  if (cartDropdown.classList.contains('show')) {
+    closeCart();
+  } else {
+    openCart();
+  }
+});
+
+// Cerrar el carrito con x
+closeCartButton.addEventListener('click', () => {
+  closeCart();
 });
 
 
-
 // anti bastis
-//   verifica si eres mayor de edad
-
-
-
+// verifica si eres mayor de edad
 const ageVerificationModal = document.querySelector('.age-verification-modal');
 const ageYesButton = document.querySelector('.age-yes');
 const ageNoButton = document.querySelector('.age-no');
@@ -60,6 +70,7 @@ ageYesButton.addEventListener('click', () => {
 ageNoButton.addEventListener('click', () => {
   window.location.href = 'https://www.youtube.com/watch?v=V5XMMHpqxRk'; // Redirige a una página apropiada
 });
+
 
 // Inicio de sesión
 document.addEventListener('DOMContentLoaded', function() {
@@ -81,6 +92,47 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('click', function(event) {
     if (event.target === loginModal) {
       loginModal.style.display = 'none';
+    }
+  });
+});
+
+// CAMBIAR LA DIRECCION
+document.addEventListener("DOMContentLoaded", function() {
+  const locationDropdown = document.querySelector('.location-dropdown');
+  const locationMenu = document.querySelector('.location-menu');
+  const locationText = document.querySelector('.location');
+
+  locationMenu.addEventListener('click', function(event) {
+      if (event.target.tagName === 'A') {
+          const selectedLocation = event.target.textContent;
+          locationText.textContent = selectedLocation;
+      }
+  });
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const overlay = document.querySelector('.bares-overlay');
+  const showModalBtn = document.getElementById('showModalBtn');
+  const closeModalBtn = document.querySelector('.close-register');
+
+  // Mostrar la pantalla emergente al hacer clic en el botón "Mostrar Modal"
+  showModalBtn.addEventListener('click', function () {
+    overlay.style.display = 'flex'; // Mostrar el overlay al centro
+  });
+
+  // Ocultar la pantalla emergente al hacer clic en el botón de cerrar
+  closeModalBtn.addEventListener('click', function () {
+    overlay.style.display = 'none'; // Ocultar el overlay
+  });
+
+  // Ocultar la pantalla emergente al hacer clic fuera del modal
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) {
+      overlay.style.display = 'none'; // Ocultar el overlay
     }
   });
 });
