@@ -34,8 +34,8 @@ function openCart() {
 
 function closeCart() {
   cartDropdown.classList.remove('show');
-  cartDropdown.style.width = '300px'; // Restablecer el ancho del carrito
-  cartDropdown.style.height = '400px'; // Restablecer la altura del carrito
+  cartDropdown.style.width = '400px'; // Restablecer el ancho del carrito
+  cartDropdown.style.height = '500px'; // Restablecer la altura del carrito
 }
 
 // abrir y cerrar el carrito con click
@@ -96,22 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// CAMBIAR LA DIRECCION
-document.addEventListener("DOMContentLoaded", function() {
-  const locationDropdown = document.querySelector('.location-dropdown');
-  const locationMenu = document.querySelector('.location-menu');
-  const locationText = document.querySelector('.location');
-
-  locationMenu.addEventListener('click', function(event) {
-      if (event.target.tagName === 'A') {
-          const selectedLocation = event.target.textContent;
-          locationText.textContent = selectedLocation;
-      }
-  });
-});
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -134,5 +118,20 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.target === overlay) {
       overlay.style.display = 'none'; // Ocultar el overlay
     }
+  });
+});
+
+
+// CAMBIAR LA DIRECCION
+document.addEventListener("DOMContentLoaded", function() {
+  const locationDropdown = document.querySelector('.location-dropdown');
+  const locationMenu = document.querySelector('.location-menu');
+  const locationText = document.querySelector('.location');
+
+  locationMenu.addEventListener('click', function(event) {
+      if (event.target.tagName === 'A') {
+          const selectedLocation = event.target.textContent;
+          locationText.textContent = selectedLocation;
+      }
   });
 });

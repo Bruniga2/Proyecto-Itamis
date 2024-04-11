@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #474646;
+  background-color: #101010;
 }
 
 
@@ -27,13 +27,25 @@ body {
   justify-content: space-between;
   align-items: center;
   top: 10px;
+
+}
+.top-bar-links{
+  margin-left: 10px;
+
 }
 
 .top-bar-links a {
   color: #fff;
   text-decoration: none;
-  margin-left: 15px;
+     
 }
+
+.top-bar-links button{
+  background-color: #ff6600;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
 
 .unete {
   background-color: #ff6600;
@@ -244,6 +256,7 @@ nav {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   text-align: center;
+  box-shadow: 0px 5px 10px #ffffff;
 }
 
 nav a {
@@ -278,7 +291,7 @@ nav a {
   max-width: 1450px;
   /*   para el tamaño del carrusel*/
   margin: auto;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* sombreado */
+  box-shadow: 0px 0px 10px #FF9800;
   border-radius: 20px;
 }
 
@@ -307,7 +320,7 @@ nav a {
 .banner img {
   border-radius: 20px;
   max-width: 100%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* sombreado */
+  box-shadow: 0px 0px 10px #FF9800;
 }
 
 
@@ -341,12 +354,13 @@ nav a {
   z-index: 100;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.5s, visibility 1s;
 }
 
 .cart-dropdown.show {
   opacity: 1;
   visibility: visible;
+  box-shadow: 0px 0px 20px #ffffff;
 }
 
 .cart-header {
@@ -365,7 +379,9 @@ nav a {
 }
 
 .cart-header button{
-  height: 30px;
+  background-color: #FF9800 ;
+  padding: 2px 11px;
+  border-radius: 5px;
 }
 
 .cart-body{
@@ -521,16 +537,16 @@ nav a {
 
 
 
-/*            estilo para el registro*/
+/* estilo para el registro*/
 
 .bares-overlay {
+  display: none; /*para que no aparezaca */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi-transparente */
-  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -538,15 +554,19 @@ nav a {
 
 /* Estilos para el modal de registro */
 .register-modal {
-  background-color: #fff;
+  background-color: #000;
   padding: 20px;
   display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   max-width: 400px;
   width: 100%;
   height: 500px;
-  
+  border-style: solid;
+  border-color: #e2dddd ;
 }
 
 /* Otros estilos para el formulario y sus elementos */
@@ -554,10 +574,20 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #FF9800; /* Borde solo en la parte inferior */
+  height: 50px;
 }
 
 .register-header h2 {
   margin: 0;
+}
+
+.register-header button{
+  background-color: #ff6600 ;
+  padding: 0px 11px;
+  border-radius: 5px;
+  margin: 10px;
 }
 
 .close-register {
@@ -565,18 +595,13 @@ nav a {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  flex-direction: column;
 }
 
 /* Estilos para el formulario */
 .register-formm {
-  margin-top: 20px;
-  display: flex;
-}
-
-.formm-group {
   display: block;
   margin-bottom: 15px;
+  
 }
 
 label {
@@ -600,11 +625,12 @@ input[type="number"] {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff; /* Color azul similar al carrito */
+  background-color: #ff6600; /* Color azul similar al carrito */
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 
@@ -628,7 +654,7 @@ input[type="number"] {
   padding: 20px;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
 }
 
 .product-card img {
@@ -884,6 +910,7 @@ footer {
 .footer-col {
   flex-basis: 25%;
   margin-bottom: auto;
+  max-width: 150px;
 }
 
 .footer-col1 a {
@@ -892,7 +919,22 @@ footer {
   text-transform: uppercase;
 }
 
+.footer-col2 {
+  flex-basis: 25%;
+  margin-bottom: auto;
+  max-width: 150px;
+}
+.footer-col2 a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ededed;  
+}
 
+.footer-col3 {
+  flex-basis: 25%;
+  margin-bottom: auto;
+  max-width: 150px;
+}
 
 
 
