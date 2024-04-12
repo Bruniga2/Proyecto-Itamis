@@ -1,3 +1,5 @@
+
+// carrusel inferior
 $(document).ready(function() {
   $(".recipes-carousel").owlCarousel({
     loop: true,
@@ -13,7 +15,7 @@ $(document).ready(function() {
         items: 3 
       },
       1000: {
-        items: 5
+        items: 4
 
       }
     }
@@ -28,14 +30,14 @@ const closeCartButton = document.querySelector('.close-cart');
 
 function openCart() {
   cartDropdown.classList.add('show');
-  cartDropdown.style.width = '400px'; // Aumentar el ancho del carrito
-  cartDropdown.style.height = '500px'; // Aumentar la altura del carrito
+  cartDropdown.style.width = '400px';
+  cartDropdown.style.height = '500px';
 }
 
 function closeCart() {
   cartDropdown.classList.remove('show');
-  cartDropdown.style.width = '400px'; // Restablecer el ancho del carrito
-  cartDropdown.style.height = '500px'; // Restablecer la altura del carrito
+  cartDropdown.style.width = '400px'; 
+  cartDropdown.style.height = '500px'; 
 }
 
 // abrir y cerrar el carrito con click
@@ -72,15 +74,16 @@ ageNoButton.addEventListener('click', () => {
 });
 
 
+
 // Inicio de sesión
 document.addEventListener('DOMContentLoaded', function() {
   const loginModal = document.querySelector('.login-modal');
   const loginBtn = document.querySelector('.login-btn');
-  const closeBtn = document.querySelector('.btn-close');
+  const closeBtn = document.querySelector('.login-close');
 
   // Mostrar el modal al hacer clic en el botón de inicio de sesión
   loginBtn.addEventListener('click', function() {
-    loginModal.style.display = 'block';
+    loginModal.style.display = 'flex';
   });
 
   // Ocultar el modal al hacer clic en el botón de cerrar
@@ -97,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
+// Registro de Cliente
 document.addEventListener('DOMContentLoaded', function () {
   const overlay = document.querySelector('.bares-overlay');
   const showModalBtn = document.getElementById('showModalBtn');
@@ -105,18 +108,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Mostrar la pantalla emergente al hacer clic en el botón "Mostrar Modal"
   showModalBtn.addEventListener('click', function () {
-    overlay.style.display = 'flex'; // Mostrar el overlay al centro
+    overlay.style.display = 'flex'; 
   });
 
   // Ocultar la pantalla emergente al hacer clic en el botón de cerrar
   closeModalBtn.addEventListener('click', function () {
-    overlay.style.display = 'none'; // Ocultar el overlay
+    overlay.style.display = 'none'; 
   });
 
   // Ocultar la pantalla emergente al hacer clic fuera del modal
   overlay.addEventListener('click', function (e) {
     if (e.target === overlay) {
-      overlay.style.display = 'none'; // Ocultar el overlay
+      overlay.style.display = 'none'; 
     }
   });
 });
@@ -126,12 +129,35 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener("DOMContentLoaded", function() {
   const locationDropdown = document.querySelector('.location-dropdown');
   const locationMenu = document.querySelector('.location-menu');
-  const locationText = document.querySelector('.location');
 
+  // Funcion para abrir el menu
+  function openMenu() {
+    locationMenu.style.display = 'block';
+  }
+
+  // Funcion para cerrar el menu
+  function closeMenu() {
+    locationMenu.style.display = 'none';
+  }
+
+  // Abrir el menu con click 
+  locationDropdown.addEventListener('click', function(event) {
+    openMenu();
+  });
+
+  // Cerrar el menu cuando elijo una opcion
   locationMenu.addEventListener('click', function(event) {
-      if (event.target.tagName === 'A') {
-          const selectedLocation = event.target.textContent;
-          locationText.textContent = selectedLocation;
-      }
+    if (event.target.tagName === 'A') {
+      const selectedLocation = event.target.textContent;
+      document.querySelector('.location input').value = selectedLocation;
+      closeMenu();
+    }
+  });
+
+  // Cerrar el menu al presionar afuera
+  document.addEventListener('click', function(event) {
+    if (!locationDropdown.contains(event.target) && !locationMenu.contains(event.target)) {
+      closeMenu();
+    }
   });
 });

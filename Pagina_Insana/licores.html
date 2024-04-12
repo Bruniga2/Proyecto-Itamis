@@ -17,15 +17,21 @@
         <a href="#">|</a>
         <a href="#">SUSCRIPCIONES </a>
         <a href="#">|</a>
-        <a href="#" class="unete">INSANO</a>
+        <button id="showModalBtn">Registrarse</button>
+        <a href="#">|</a>
+        <button class="login-btn">Iniciar Sesión</button>
       </div>
       <div class="location-dropdown">
-        <span class="location">Alerce, de los Lagos</span>
+        <span class="location"><input type="text" placeholder="Cambiar Localizacion"></span>
         <i class="fa fa-chevron-down"></i>
         <div class="location-menu">
           <a href="#">santiago</a>
           <a href="#">Melipilla</a>
           <a href="#">El Monte</a>
+          <a href="#">Mapuches</a>
+          <a href="#">Iquique</a>
+          <a href="#">Valparaiso</a>
+          <a href="#">Maria Pinto Insano</a>
           <!-- Agrega más opciones aquí -->
         </div>
       </div>
@@ -38,10 +44,14 @@
         <a href="index.html">Bar Three Blacks</a>
       </div>
       <div class="icons">
-        <a href="#"><i class="fa fa-user"></i></a>
-        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+        <a href="#" class="cart-icon">
+          <i class="fa fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
       </div>
     </div>
+
+
     <form>
       <input type="text" placeholder="¿Qué estás buscando?">
     </form>
@@ -49,13 +59,12 @@
     <nav>
 
       <div class="dropdown">
-        <a href="index.html">Menu Principal</a>
+        <a href="index.html">Menu principal</a>
         <div class="dropdown-menu">
-          <a href="index.html">Ofertas</a>
+          <a href="index.html">Ofertas Semanales</a>
           <a href="index.html">Recetas Cocteles</a>
         </div>
       </div>
-
       <div class="dropdown">
         <a href="cervezas.html">CERVEZAS</a>
         <div class="dropdown-menu">
@@ -95,14 +104,103 @@
       <div class="dropdown">
         <a href="sinalcohol.html">Bebidas</a>
         <div class="dropdown-menu">
-          <a href="sinalcohol.html">Jugos y Nectares</a>
+          <a href="sinalcohol.html">Energeticas</a>
           <a href="sinalcohol.html">Aguas</a>
-          <a href="sinalcohol.html">Bebidas</a>
+          <a href="sinalcohol.html">Bebidas y Bebidas</a>
         </div>
       </div>
 
       <!-- Resto del código -->
     </nav>
+  </header>
+
+  <br>
+
+  <!-- carrito -->
+  <div class="cart-dropdown">
+    <div class="cart-header">
+      <h3>Carrito de Compras</h3>
+      <button class="close-cart">&times;</button>
+    </div>
+    <div class="cart-body">
+      <ul class="cart-item">
+        <!-- Elementos del carrito se agregarán aquí dinámicamente -->
+      </ul>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-price">$0.00</span>
+      </div>
+      <div class="cart-actions">
+        <a href="#" class="btn btn-checkout">Finalizar Compra</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- inicio de secion -->
+  <div class="login-modal">
+    <div class="login-content">
+      <h2>Iniciar Sesión</h2>
+      <form class="login">
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit" class="btn btn-login">Iniciar Sesión</button>
+      </form>
+      <button class="btn btn-close">Cerrar</button>
+    </div>
+  </div>
+  <br>
+
+
+
+
+
+<!-- registro -->
+
+
+  <div class="bares-overlay">
+    <div class="register-modal">
+      <div class="register-header">
+        <h2>Regístrate</h2>
+        <button class="close-register">&times;</button>
+      </div>
+      <form class="register-formm">
+        <div class="formm-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="formm-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="formm-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="formm-group">
+          <label for="phone">Teléfono</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="formm-group">
+          <label for="address">Dirección</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+        <div class="formm-group">
+          <label for="age">Edad</label>
+          <input type="number" id="age" name="age" min="18" required>
+        </div>
+        <button type="submit" class="btn btn-register">Registrarse</button>
+      </form>
+    </div>
+  </div>
 
   </header>
 
@@ -344,6 +442,13 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="script.js"></script>
+</body>
 
 </body>
 

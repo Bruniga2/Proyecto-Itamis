@@ -14,14 +14,14 @@
 }
 
 body {
-  background-color: #101010;
+  background-color: #121212;
 }
 
 
 
 /*barra superior*/
 .top-bar {
-  background-color: #000;
+  background-color: #000000;
   padding: 5px;
   display: flex;
   justify-content: space-between;
@@ -132,7 +132,7 @@ body {
 }
 
 form {
-  height: 35px;
+  height: 40px;
   background-color: #000000;
   display: flex;
   justify-content: center;
@@ -163,6 +163,7 @@ form input {
 .location-menu {
   display: none;
   position: absolute;
+  margin-top: 5px;
   margin-right: 25px;
   background-color: #010101;
   min-width: 150px;
@@ -199,6 +200,7 @@ form input {
   margin-left: 6px;
 }
 
+
 .location input {
   text-align: center;
   background-color: #000000;
@@ -207,8 +209,8 @@ form input {
   max-width:150px;
   font-size: 16px;
   height: 25px;
-  
 }
+
 
 
 .location-dropdown:hover .location-menu {
@@ -256,7 +258,7 @@ nav {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   text-align: center;
-  box-shadow: 0px 5px 10px #ffffff;
+  box-shadow: 0px 2px 2px #ffffff;
 }
 
 nav a {
@@ -494,46 +496,90 @@ nav a {
 
 /*   estilo para el inicio de secion*/
 .login-modal {
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  align-items: center;
   z-index: 999;
 }
 
 .login-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000000;
+  background-color: #000;
   padding: 20px;
-  border-radius: 5px;
-  text-align: center;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 380px;
+  width: 100%;
+  height: 250px;
+  border-style: solid;
+  border-color: #e2dddd ;
 }
 
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom: 2px solid #FF9800;
+}
 
+.login-header h2 {
+  margin: 0;
+}
+
+.login-header button {
+  background-color: #ff6600 ;
+  padding: 0px 11px;
+  border-radius: 5px;
+  margin: 10px;
+}
 
 .btn-close {
-  position: absolute;
- 
-  top: 10px;
-  right: 100px;
   background: none;
   border: none;
+  font-size: 24px;
   cursor: pointer;
 }
-.login-btn{
-  background-color: #ff6600;
-  padding: 5px 10px;
-  border-radius: 5px;
+
+.login-content form {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 
+.login-content input[type="email"],
+.login-content input[type="password"] {
+  width: 100%;
+  max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
+.btn-login {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
 
 
 
@@ -569,7 +615,6 @@ nav a {
   border-color: #e2dddd ;
 }
 
-/* Otros estilos para el formulario y sus elementos */
 .register-header {
   display: flex;
   justify-content: space-between;
@@ -597,7 +642,6 @@ nav a {
   cursor: pointer;
 }
 
-/* Estilos para el formulario */
 .register-formm {
   display: block;
   margin-bottom: 15px;
@@ -625,7 +669,7 @@ input[type="number"] {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #ff6600; /* Color azul similar al carrito */
+  background-color: #ff6600;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -654,7 +698,7 @@ input[type="number"] {
   padding: 20px;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  box-shadow: 0px 0px 4px rgb(255, 255, 255);
 }
 
 .product-card img {
@@ -691,6 +735,7 @@ input[type="number"] {
 .load-more:hover {
   background-color: #ff6600;
 }
+
 
 /* Estilos para el carrusel de recetas */
 .recipes-carousel {
@@ -756,13 +801,18 @@ footer {
   color: #fff;
   padding: 10px;
   text-align: center;
+  border-top: 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 0px 6px #ffffff;
+
 }
 
 
 
 /* EDICICON INSANA DEL CARRRUSEL INFERIOR */
 .container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 40px 0;
   
@@ -777,9 +827,13 @@ footer {
 .recipe-item {
   background-color: #333333;
   padding: 20px;
-  margin-right: 20px;
+  margin-top: 5px;
+  margin-right: 18px;
+  margin-left: 2px;
+  margin-bottom: 1px;
   border-radius: 5px;
   flex: 0 0 300px;
+  width: 217px;
 }
 
 .recipe-item img {
@@ -814,7 +868,7 @@ footer {
 .recipes-carousel .recipe-item {
   text-align: center; 
   padding: 20px; 
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 4px rgb(255, 255, 255);
 }
 
 
@@ -965,7 +1019,7 @@ footer {
 
 /*  pagina servezasss*/
 .beer-section {
-  background-color: #474646;
+  background-color: #121212;
   color: #fff;
   padding: 40px 20px;
 }
@@ -1012,7 +1066,7 @@ footer {
   padding: 20px;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 4px rgb(255, 255, 255);
 }
 
 .beer-card img {
