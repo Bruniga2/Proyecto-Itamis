@@ -55,7 +55,7 @@ body {
 
 
 
-/* LOGOS Y NOMBRE PRINCIPAL */
+/* LOGOS Y NOMBRE PRINCIPAL
 .logoinsano{
   overflow: hidden;
   flex: 0 0 auto; 
@@ -67,7 +67,7 @@ body {
   width: 100%;
   animation: giro 3s linear 6s infinite
   
-}
+} */
 
 
 #principal {

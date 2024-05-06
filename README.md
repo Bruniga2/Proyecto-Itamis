@@ -12,5 +12,8 @@
 -- formulario de suscripcion funcional
 -- logo usuario editable segun suscripcion
 
--- CARRITO FUNCIONAL CON PRECIOS
+-- CARRITO FUNCIONAL CON PRECIOS 
 
+--API (DATOS DE USUARIO - RANDOMUSER.ME)
+--API (RECETAS COCTELES - THECOCKTAILDB.COM)
+--API (DATOS PRODUCTOS - FAKEAPI.PLATZI.COM)
