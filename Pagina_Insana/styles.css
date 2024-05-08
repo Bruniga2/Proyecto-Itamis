@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-* {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -14,14 +14,17 @@
 }
 
 body {
-  background-color: #121212;
+  background-color: #fcf8e8;
 }
 
+header {
+  background-color: #7d7d7d;
 
+}
 
 /*barra superior*/
 .top-bar {
-  background-color: #000000;
+  /* background-color: #000000; */
   padding: 5px;
   display: flex;
   justify-content: space-between;
@@ -29,7 +32,8 @@ body {
   top: 10px;
 
 }
-.top-bar-links{
+
+.top-bar-links {
   margin-left: 10px;
 
 }
@@ -37,10 +41,10 @@ body {
 .top-bar-links a {
   color: #fff;
   text-decoration: none;
-     
+
 }
 
-.top-bar-links button{
+.top-bar-links button {
   background-color: #ff6600;
   padding: 5px 15px;
   border-radius: 5px;
@@ -55,22 +59,22 @@ body {
 
 
 
-/* LOGOS Y NOMBRE PRINCIPAL
-.logoinsano{
-  overflow: hidden;
-  flex: 0 0 auto; 
-  
+
+/* LOGOS Y NOMBRE PRINCIPAL */
+.logoinsano {
+  flex: 0 0 auto;
+  margin-left: 7%;
 }
 
 .logoinsano img {
-  overflow: hidden; 
-  width: 100%;
-  animation: giro 3s linear 6s infinite
-  
-} */
+  max-width: 20vw;
+  min-width: 10vw;
+
+  /* animation: giro 3s linear 6s infinite */
+}
 
 
-#principal {
+/* #principal {
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -84,12 +88,12 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  animation: giro 3s linear 6s infinite, brillo 3s linear 6s infinite;
-  
+  animation: giro 3s linear 6s infinite, brillo 3s linear 6s infinite; 
+
 }
 
 /* animacion logo */
-@keyframes giro {
+/* @keyframes giro {
   0% {
     transform: rotate(0deg);
   }
@@ -120,44 +124,67 @@ body {
   100% {
     opacity: 1;
   }
-}
+} */
 
 /* Estilos para el encabezado principal */
 .main-header {
-  background-color: #000;
+  background-color: #000000;
   padding: 10px;
   display: flex;
   align-items: center;
-  height: 80px;
+  justify-content: space-between;
+  height: 105px;
 }
 
-form {
-  height: 40px;
-  background-color: #000000;
+.buscador {
+  flex-grow: 1;
   display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+
+form {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+
 }
 
 form input {
   text-align: center;
-  background-color: #000000;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   border: none;
-  max-width: 350px;
-  font-size: 16px;
-  height: 25px;
+  max-width: 300px;
+  min-width: 130px;
+  width: 100%;
+  font-size: 1vw;
+  /* WEOOOOOOOOOOOOOOOOOOOOOOOON */
+  height: 30px;
 
 }
 
-.icons{
-  margin-right: 20px;
-  
-  
+.icon1 {
+  margin-right: 8vw;
+  display: flex;
+
 }
-.icons a {
+
+.icon2 {
+  margin-right: 1vw;
+  display: flex;
+
+}
+
+.icon2,
+.icon1 a {
   color: #fff;
-  margin-left: 10px;
-  flex: 0 0 auto;
+  margin-right: 10px;
+  font-size: 130%;
+  text-decoration: none;
 }
 
 .location-menu {
@@ -173,7 +200,7 @@ form input {
   border: 1px;
   border-radius: 5px;
   border-style: solid;
-  border-color: #e2dddd ;
+  border-color: #e2dddd;
 }
 
 .location-menu a {
@@ -187,12 +214,12 @@ form input {
 .location-dropdown {
   position: relative;
   display: inline-block;
-  
+
 }
 
 .location-dropdown .location {
   cursor: pointer;
-  float: left; 
+  float: left;
 }
 
 .location-dropdown i {
@@ -206,7 +233,7 @@ form input {
   background-color: #000000;
   color: #fff;
   border: none;
-  max-width:150px;
+  max-width: 150px;
   font-size: 16px;
   height: 25px;
 }
@@ -220,12 +247,12 @@ form input {
 .dropdown {
   position: relative;
   display: inline-block;
-  height: 30px;
+  height: 35px;
 }
 
 /* barra de opciones */
 .dropdown-menu {
-  top: 35px;
+  top: 38px;
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -245,27 +272,29 @@ form input {
   display: block;
 }
 
-
-
-
-
 /* Estilos para la barra de navegación */
 nav {
   background-color: #000;
   display: flex;
   justify-content: center;
-  height: 35px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  text-align: center;
-  box-shadow: 0px 2px 2px #ffffff;
+  height: 45px;
+  /* border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
+  border-bottom: 2px solid #ff6600;
+  border-top: 2px solid #ff6600;
+}
+
+nav .dropdown {
+  top: 6px;
+  align-items: center;
+  height: 28px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  padding: 10px;
-  font-size: 16px;
+  padding: 21px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -277,10 +306,10 @@ nav a {
 .dropdown-menu a {
   color: #fff;
   text-align: start;
-  
+
 }
 
-.dropdown:hover>a {
+.dropdown:hover {
   border-bottom: 2px solid #ff6600;
 }
 
@@ -293,7 +322,7 @@ nav a {
   max-width: 1450px;
   /*   para el tamaño del carrusel*/
   margin: auto;
-  box-shadow: 0px 0px 10px #FF9800;
+  border: 2px solid;
   border-radius: 20px;
 }
 
@@ -305,11 +334,9 @@ nav a {
 
 .carousel-item img {
   display: inline-block;
-  max-width: 100%;
-  
+  max-width: 90%;
+
 }
-
-
 
 /* Estilos para el banner   960 360 */
 .banner {
@@ -317,15 +344,13 @@ nav a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  
+
 }
 
 .banner img {
   border-radius: 20px;
-  max-width: 100%;
-  box-shadow: 0px 0px 10px #FF9800;
+  max-width: 100%;  
 }
-
 
 /* Estilos para los títulos de sección */
 .section-title {
@@ -370,7 +395,8 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #FF9800; /* Borde solo en la parte inferior */
+  border-bottom: 2px solid #FF9800;
+  /* Borde solo en la parte inferior */
   padding: 10px;
   height: 45px;
 }
@@ -381,18 +407,18 @@ nav a {
   font-size: 30px;
 }
 
-.cart-header button{
-  background-color: #FF9800 ;
+.cart-header button {
+  background-color: #FF9800;
   padding: 2px 11px;
   border-radius: 5px;
 }
 
-.cart-body{
+.cart-body {
   height: 500px;
-  
+
 }
 
-.cart-footer{
+.cart-footer {
   border-top: 2px solid #FF9800;
 }
 
@@ -458,13 +484,14 @@ nav a {
   left: 0;
   width: 100%;
   height: 100%;
-  color: #FFFFFF; /* Color blanco */
+  color: #FFFFFF;
+  /* Color blanco */
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
-  
+
 }
 
 .age-verification-content {
@@ -473,7 +500,7 @@ nav a {
   border-radius: 5px;
   text-align: center;
   border-style: solid;
-  border-color: #e2dddd ;
+  border-color: #e2dddd;
 }
 
 .age-verification-buttons button {
@@ -522,7 +549,7 @@ nav a {
   width: 100%;
   height: 250px;
   border-style: solid;
-  border-color: #e2dddd ;
+  border-color: #e2dddd;
 }
 
 .login-header {
@@ -538,7 +565,7 @@ nav a {
 }
 
 .login-header button {
-  background-color: #ff6600 ;
+  background-color: #ff6600;
   padding: 0px 11px;
   border-radius: 5px;
   margin: 10px;
@@ -563,7 +590,8 @@ nav a {
 .login-content input[type="email"],
 .login-content input[type="password"] {
   width: 100%;
-  max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+  max-width: 300px;
+  /* Ajusta el ancho máximo según sea necesario */
   padding: 8px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -587,7 +615,8 @@ nav a {
 /* estilo para el registro*/
 
 .bares-overlay {
-  display: none; /*para que no aparezaca */
+  display: none;
+  /*para que no aparezaca */
   position: fixed;
   top: 0;
   left: 0;
@@ -613,7 +642,7 @@ nav a {
   width: 100%;
   height: 500px;
   border-style: solid;
-  border-color: #e2dddd ;
+  border-color: #e2dddd;
 }
 
 .register-header {
@@ -621,7 +650,8 @@ nav a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  border-bottom: 2px solid #FF9800; /* Borde solo en la parte inferior */
+  border-bottom: 2px solid #ff6600;
+  /* Borde solo en la parte inferior */
   height: 50px;
 }
 
@@ -629,8 +659,8 @@ nav a {
   margin: 0;
 }
 
-.register-header button{
-  background-color: #ff6600 ;
+.register-header button {
+  background-color: #ff6600;
   padding: 0px 11px;
   border-radius: 5px;
   margin: 10px;
@@ -646,7 +676,7 @@ nav a {
 .register-formm {
   display: block;
   margin-bottom: 15px;
-  
+
 }
 
 label {
@@ -691,7 +721,7 @@ input[type="number"] {
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
   padding: 20px;
-  
+
 }
 
 .product-card {
@@ -710,7 +740,7 @@ input[type="number"] {
 }
 
 .product-card h3 {
-  font-size: 18px;
+  font-size: 2vw;
   margin: 10px 0;
 }
 
@@ -742,7 +772,7 @@ input[type="number"] {
 .recipes-carousel {
   max-width: 100000px;
   margin: 0 auto;
-  
+
 }
 
 .recipes-carousel .recipe-item {
@@ -750,7 +780,7 @@ input[type="number"] {
   padding: 20px;
   text-align: center;
   border-radius: 5px;
-  
+
 }
 
 .recipes-carousel .recipe-item img {
@@ -803,8 +833,7 @@ footer {
   padding: 10px;
   text-align: center;
   border-top: 5px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+
   box-shadow: 0px 0px 6px #ffffff;
 
 }
@@ -816,7 +845,7 @@ footer {
   max-width: 1180px;
   margin: 0 auto;
   padding: 40px 0;
-  
+
 }
 
 .recipe-grid {
@@ -851,41 +880,42 @@ footer {
 .recipe-item p {
   margin-bottom: 10px;
   color: #ccc;
-  
+
 }
 
 
 .recipes-carousel .recipe-item p {
   margin-bottom: 60px;
-  
+
 }
+
 .recipes-carousel .recipe-item img {
-  width: 100%; 
-  height: 200px; 
-  object-fit: cover; 
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 
 .recipes-carousel .recipe-item {
-  text-align: center; 
-  padding: 20px; 
+  text-align: center;
+  padding: 20px;
   box-shadow: 0px 0px 4px rgb(255, 255, 255);
 }
 
 
 .recipes-carousel .recipe-item button {
-  background-color: #e65c00; 
-  border: none; 
-  padding: 10px 20px; 
-  cursor: pointer; 
-  border-radius: 5px; 
-  font-size: 16px; 
-  margin-top: 10px; 
+  background-color: #e65c00;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 
 .recipes-carousel .recipe-item h2 {
-  font-size: 24px; 
+  font-size: 24px;
   margin-top: 10px;
 
 }
@@ -953,13 +983,15 @@ footer {
   cursor: pointer;
 }
 
+
 .footer-content {
+
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 40px;
+
 }
 
 .footer-col {
@@ -979,10 +1011,11 @@ footer {
   margin-bottom: auto;
   max-width: 150px;
 }
-.footer-col2 a{
+
+.footer-col2 a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #ededed;  
+  color: #ededed;
 }
 
 .footer-col3 {
@@ -1015,7 +1048,20 @@ footer {
   font-weight: bold;
 }
 
+/* logo footer */
 
+
+
+.logo-footer {
+  height: 75px;
+
+}
+
+.logo-footer img {
+  width: 7%;
+  max-width: 20%;
+
+}
 
 
 /*  pagina servezasss*/
@@ -1144,10 +1190,7 @@ footer {
 
 .load-more button:hover {
   background-color: #e65c00;
-  
+
 }
 
-@media (max-width: 800px) {
-  
-}
-
+@media (max-width: 800px) {}

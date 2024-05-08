@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 
 // Carrito
-const cartIcon = document.querySelector('.cart-icon');
+const cartIcon = document.querySelector('.cart-icon2');
 const cartDropdown = document.querySelector('.cart-dropdown');
 const closeCartButton = document.querySelector('.close-cart');
 
