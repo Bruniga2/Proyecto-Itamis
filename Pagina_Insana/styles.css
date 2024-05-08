@@ -770,9 +770,8 @@ input[type="number"] {
 
 /* Estilos para el carrusel de recetas */
 .recipes-carousel {
-  max-width: 100000px;
+  max-width: 1000px;
   margin: 0 auto;
-
 }
 
 .recipes-carousel .recipe-item {
@@ -1194,3 +1193,54 @@ footer {
 }
 
 @media (max-width: 800px) {}
+
+
+.card-animado {
+  width: 220px;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.card-inner-animado {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card-animado:hover .card-inner-animado {
+  transform: rotateY(180deg);
+}
+
+.card-front-animado,
+.card-back-animado {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front-animado {
+  background-color: #6A2C70;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #6A2C70;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-back-animado {
+  background-color: #F08A5D;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #F08A5D;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}
