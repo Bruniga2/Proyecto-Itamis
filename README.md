@@ -9,11 +9,12 @@
 <!-- -- editar el tamaño del footer -->
 -- editar estilo y animaciones de menu-opciones 
 -- cambiar formulario de localizacion
--- formulario de suscripcion funcional
+
+-- formulario de suscripcion funcional(lo mismo que el registro solo visual)
 -- logo usuario editable segun suscripcion
 
 -- CARRITO FUNCIONAL CON PRECIOS 
 
---API (DATOS DE USUARIO - RANDOMUSER.ME)
+
 --API (RECETAS COCTELES - THECOCKTAILDB.COM)
---API (DATOS PRODUCTOS - FAKEAPI.PLATZI.COM)
+<!-- --API (DATOS PRODUCTOS - FAKEAPI.PLATZI.COM) TA MUY DIFICL ESTA SHIT (ver con el profe) -->

@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #fcf8e8;
+  background-color: #f5f5f5;
 }
 
 header {
@@ -362,26 +362,25 @@ nav a {
 
 /* Estilos para el carrusel */
 .carousel-indicators button {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .carousel {
-  max-width: 1450px;
+  max-width: 1350px;
   /*   para el tamaño del carrusel*/
+  max-height: 300px;
   margin: auto;
-  border: 2px solid;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .carousel-inner {
   text-align: center;
-  border-radius: 20px;
-  max-height: 440px;
+  border-radius: 10px;
+  border: 2px solid #000;
 }
 
 .carousel-item img {
   display: inline-block;
-  max-width: 90%;
 
 }
 
@@ -762,46 +761,143 @@ input[type="number"] {
 
 /* Estilos para las tarjetas de productos */
 .products {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
   padding: 20px;
+  justify-content: space-around;
 
 }
 
 .product-card {
-  background-color: #333333;
+  max-width: 20vw;
+  max-height: 470px;
+  width: 100%;
+  height: 100%;
+  margin: 20px auto;
+  background-color: #fff;
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+  position: relative;
   text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 4px rgb(255, 255, 255);
 }
 
 .product-card img {
+  display: block;
+  max-width: 12vw;
+  height: 100%;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.product-card h2 {
+  text-align: center;
+  font-size: 1.4vw;
+  margin: 10px 0;
+  color: #000;
+}
+
+
+.product-card .precio-antes {
+  
+  font-size: 1vw;
+  color: red; /* Color rojo para el precio antes */
+}
+
+.product-card .precio-ahora {
+  font-size: 1.5vw;
+  color: green; /* Color verde para el precio ahora */
+}
+
+.product-card div {
+  font-size: 1vw;
+  color: #000;
+}
+
+
+/* boton carrito */
+.button-comprar {
+  --width: 100%;
+  --height: 100%;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #000000;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  border-radius: 0.45em;
+  transition: background 0.3s;
+  max-width: 10vw;
+  max-height: 2.4vw; 
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text-comprar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  top: 0;
+  transition: top 0.5s;
+}
+
+.button-wrapper-comprar, .text-comprar, .icon-comprar {
+  overflow: hidden;
+  position: absolute;
   width: 100%;
-  max-height: 200px;
-  object-fit: cover;
+  height: 100%;
+  left: 0;
+  color: #000000;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 
-.product-card h3 {
-  font-size: 2vw;
-  margin: 10px 0;
+.icon-comprar {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.5s;
 }
 
-.product-card p {
-  font-size: 16px;
-  margin-bottom: 10px;
+.icon-comprar svg {
+  width: 24px;
+  height: 24px;
 }
 
+.button-comprar:hover {
+  background: #000000;
+}
+
+.button-comprar:hover .text-comprar {
+  top: -100%;
+  background-color: #ff6600;
+  transition: 1s;
+  border-radius: 0px;
+}
+
+.button-comprar:hover .icon-comprar {
+  top: 0;
+  border-radius: 0px;
+  background-color: #ff6600;
+  transition: 1s;
+}
+
+/* boton Leer mas */
 .load-more {
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
   background-color: #ff6600;
-  ;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -822,7 +918,7 @@ input[type="number"] {
 }
 
 .recipes-carousel .recipe-item {
-  background-color: #333333;
+  background-color: #000000;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
@@ -1185,7 +1281,7 @@ footer {
   font-size: 16px;
 }
 
-.add-to-cart {
+/* .add-to-cart {
   background-color: #ff6600;
   color: #fff;
   border: none;
@@ -1197,72 +1293,7 @@ footer {
 
 .add-to-cart:hover {
   background-color: #ff6600;
-}
-
-.button-comprar {
-  --width: 150px;
-  --height: 35px;
-  --gap-between-tooltip-to-button: 18px;
-  --button-color: #222;
-  width: var(--width);
-  height: var(--height);
-  background: var(--button-color);
-  position: relative;
-  text-align: center;
-  border-radius: 0.45em;
-  transition: background 0.3s;
-  max-width: 200px; 
-  margin: 0 auto;
-}
-
-.text-comprar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9em;
-}
-
-.button-wrapper-comprar, .text-comprar, .icon-comprar {
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  color: #ffffff;
-  background-color: #ff6600;
-  border-radius: 5px;
-}
-
-.text-comprar {
-  top: 0;
-  transition: top 0.5s;
-}
-
-.icon-comprar {
-  color: #fff;
-  top: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: top 0.5s;
-}
-
-.icon-comprar svg {
-  width: 24px;
-  height: 24px;
-}
-
-.button-comprar:hover {
-  background: #000000;
-}
-
-.button-comprar:hover .text-comprar {
-  top: -100%;
-}
-
-.button-comprar:hover .icon-comprar {
-  top: 0;
-}
+} */
 
 
 .load-more {
@@ -1356,4 +1387,13 @@ footer {
   justify-content: center;
   font-size: 24px;
   transform: rotateY(180deg);
+}
+
+.form-container {
+  display: inline-block;
+  width: 45%;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
