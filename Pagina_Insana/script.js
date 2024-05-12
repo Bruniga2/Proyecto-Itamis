@@ -73,6 +73,155 @@ ageNoButton.addEventListener('click', () => {
   window.location.href = 'https://www.youtube.com/watch?v=V5XMMHpqxRk'; // Redirige a una página apropiada
 });
 
+// Arreglo de cócteles predefinidos
+var cocktails = [
+  {
+      name: "Mojito",
+      image: "https://www.thecocktaildb.com/images/media/drink/ysqvqp1461867292.jpg",
+      ingredients: [
+          "2 oz Ron blanco",
+          "1 oz Jugo de limón fresco",
+          "2 cucharaditas de Azúcar",
+          "8 hojas de Menta",
+          "Club soda"
+      ]
+  },
+  {
+      name: "Margarita",
+      image: "https://www.thecocktaildb.com/images/media/drink/wpxpvu1439905379.jpg",
+      ingredients: [
+          "2 oz Tequila",
+          "1 oz Triple sec",
+          "1 oz Jugo de limón fresco",
+          "Sal (para escarchar el vaso)"
+      ]
+  },
+  {
+      name: "Piña Colada",
+      image: "https://www.thecocktaildb.com/images/media/drink/cpf4j51504371346.jpg",
+      ingredients: [
+          "2 oz Ron blanco",
+          "4 oz Jugo de piña",
+          "2 oz Crema de coco",
+          "1 taza de Hielo"
+      ]
+  },
+  {
+      name: "Cosmopolitan",
+      image: "https://www.thecocktaildb.com/images/media/drink/kpsajh1504368362.jpg",
+      ingredients: [
+          "1 1/2 oz Vodka cítrico",
+          "1 oz Triple sec",
+          "1/2 oz Jugo de limón fresco",
+          "1/4 oz Jarabe de arándano rojo"
+      ]
+  },
+  {
+      name: "Daiquiri",
+      image: "https://www.thecocktaildb.com/images/media/drink/usuuur1439906797.jpg",
+      ingredients: [
+          "2 oz Ron blanco",
+          "3/4 oz Jugo de limón fresco",
+          "1/4 oz Jarabe de azúcar"
+      ]
+  },
+  {
+      name: "Caipirinha",
+      image: "https://www.thecocktaildb.com/images/media/drink/yd47111503565515.jpg",
+      ingredients: [
+          "2 oz Cachaça",
+          "1 Lima cortada en trozos",
+          "2 cucharaditas de Azúcar"
+      ]
+  },
+  {
+      name: "Old Fashioned",
+      image: "https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg",
+      ingredients: [
+          "2 oz Bourbon o whiskey de centeno",
+          "2 pizcas de Angostura bitters",
+          "1 terrón de Azúcar",
+          "Agua con gas"
+      ]
+  },
+  {
+      name: "Manhattan",
+      image: "https://www.thecocktaildb.com/images/media/drink/hz7p4t1589575281.jpg",
+      ingredients: [
+          "2 oz Whiskey de centeno",
+          "1 oz Vermú dulce",
+          "2 pizcas de Angostura bitters",
+          "Cereza para decorar"
+      ]
+  },
+  {
+      name: "Bloody Mary",
+      image: "https://www.thecocktaildb.com/images/media/drink/t6caa21582485702.jpg",
+      ingredients: [
+          "1 1/2 oz Vodka",
+          "3 oz Jugo de tomate",
+          "1/2 oz Jugo de limón fresco",
+          "1/4 oz Salsa inglesa",
+          "2 pizcas de Salsa picante",
+          "Pimienta negra",
+          "Sal de apio",
+          "Apio o limón para decorar"
+      ]
+  },
+  {
+      name: "Tequila Sunrise",
+      image: "https://www.thecocktaildb.com/images/media/drink/quqyqp1480879103.jpg",
+      ingredients: [
+          "1 1/2 oz Tequila",
+          "3 oz Jugo de naranja",
+          "1/2 oz Granadina"
+      ]
+  }
+];
+
+
+// Función para mostrar los detalles de un cóctel en una tarjeta específica
+function displayCocktail(cocktailIndex, cardId) {
+  var cocktail = cocktails[cocktailIndex];
+  var cardContainer = document.getElementById(cardId);
+  var cardFront = cardContainer.querySelector(".card-front");
+  var cardBack = cardContainer.querySelector(".card-back");
+  var cocktailImage = cardFront.querySelector("img");
+  var ingredientList = cardBack.querySelector("ul");
+  
+  cocktailImage.src = cocktail.image;
+  cocktailImage.alt = cocktail.name;
+  
+  cardBack.querySelector("p").textContent = "Ingredientes:";
+  ingredientList.innerHTML = "";
+  
+  var firstIngredient = true;
+  cocktail.ingredients.forEach(function(ingredient) {
+      var listItem = document.createElement("li");
+      listItem.textContent = ingredient;
+      if (firstIngredient) {
+          listItem.classList.add("first-ingredient");
+          firstIngredient = false;
+      } else {
+          listItem.classList.add("other-ingredients");
+      }
+      ingredientList.appendChild(listItem);
+  });
+}
+
+
+
+// Mostrar los cócteles en las tarjetas correspondientes
+displayCocktail(0, "cocktail1");
+displayCocktail(1, "cocktail2");
+displayCocktail(2, "cocktail3");
+displayCocktail(3, "cocktail4");
+displayCocktail(4, "cocktail5");
+displayCocktail(5, "cocktail6");
+displayCocktail(6, "cocktail7");
+displayCocktail(7, "cocktail8");
+displayCocktail(8, "cocktail9");
+displayCocktail(9, "cocktail10");
 
 
 
