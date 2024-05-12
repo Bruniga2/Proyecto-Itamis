@@ -28,12 +28,7 @@
             <a href="#">SUSCRIPCIONES </a>
             <a href="#">|</a>
             <a href="#suscribirse">ÚNETENOS </a>
-            <a href="#">|</a>
-            <a href="registro.html">DURP</a>
             
-            <button id="showModalBtn">Registrarse</button>
-            <a href="#">|</a>
-            <button class="login-btn">Iniciar Sesión</button>
           </div>
           <div class="location-dropdown">
             <span class="location"><input type="text"
@@ -60,9 +55,9 @@
           </a>
 
           <div class="buscador">
-              <input type="text" placeholder="¿Qué estás buscando?">
+            <input class="buscador-input" type="text" placeholder="¿Qué estás buscando?">
           </div>
-          
+
           <div class="icon1">
             <a href="#" class="cart-icon1">
               <i class="fas fa-user"></i>
@@ -72,8 +67,9 @@
           <div class="icon2">
             <a href="#" class="cart-icon2">
               <i class="fa fa-shopping-cart"></i>
-              <span class="cart-count">0</span>
+              <span id="cart-count">0</span>
             </a>
+
             <span class="icon-text">Carrito</span>
           </div>
         </div>
@@ -162,19 +158,38 @@
 
       <!-- carrito -->
       <div class="cart-dropdown">
+
         <div class="cart-header">
           <h3>Carrito de Compras</h3>
-          <button class="close-cart">&times;</button>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="close-cart">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12" />
+          </svg>
         </div>
-        <div class="cart-body">
-          <ul class="cart-item">
-            <!-- Elementos del carrito se agregarán aquí dinámicamente -->
-          </ul>
+        <div class="row-product">
+          <div class="cart-product">
+            <div class="product-info">
+              <span class="cantidad-product">1</span>
+              <p class="nombre-product">La Pizka Sour Limón Sutil 24° Botella
+                1000cc</p>
+              <span class="precio-product">1000</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              class="product-delete">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </div>
         </div>
+        <!-- <p class="cart-empty">El carrito está vacío</p> -->
+
         <div class="cart-footer">
           <div class="cart-total">
             <span>Total:</span>
-            <span class="total-price">$0.00</span>
+            <span class="total-price">$0</span>
           </div>
           <div class="cart-actions">
             <a href="#" class="btn btn-checkout">Finalizar Compra</a>
@@ -307,12 +322,15 @@
             <div id="Vino-Bestia-Azul-Carmenere-750cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi-bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
@@ -320,12 +338,15 @@
             <div id="Whisky-Johnnie-Walker-Black-Label-750cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
@@ -333,12 +354,15 @@
             <div id="24x-Austral-4,6-Botella-330cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
@@ -346,12 +370,15 @@
             <div id="Espíritu-los-Andes-40°-750cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
@@ -359,12 +386,15 @@
             <div id="24x-Austral-Red-Lager-5°-Lata-470cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
@@ -372,12 +402,15 @@
             <div id="Casillero-del-Diablo-Merlot-Botella-750cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
@@ -385,12 +418,15 @@
             <div id="Gin-Bombay-Bramble-37,5°-Botella-700cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
@@ -398,12 +434,15 @@
             <div id="Glenfiddich-15-años-40°-750cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
@@ -411,12 +450,15 @@
             <div id="Absolut-Original-750cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
@@ -424,16 +466,19 @@
             <div id="La-Pizka-Sour-Limón-Sutil-24°-Botella-1000cc"></div>
             <div class="button-comprar">
               <button class="button-wrapper-comprar">
-                  <div class="text-comprar">Agregar al carrito</div>
-                  <span class="icon-comprar">
-                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                      </svg>
-                  </span>
+                <div class="text-comprar">Agregar al carrito</div>
+                <span class="icon-comprar">
+                  <svg viewBox="0 0 16 16" class="bi bi-cart2"
+                    fill="currentColor" height="16" width="16"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                  </svg>
+                </span>
               </button>
             </div>
           </div>
-          
+
         </section>
       </main>
 

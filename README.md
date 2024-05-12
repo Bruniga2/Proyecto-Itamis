@@ -3,11 +3,11 @@
 -- que verificacion mayor de edad solo salga 1 ves y cambiar fondo a NEGRO
 -- agregar apartado de ususario para registrarse, ingresar y salir de cuenta
 <!-- -- cambiar logo  -->
--- CAMBIAR DISEÑO  
--- COLOR DE LA PAGINA
+-- CAMBIAR DISEÑO (HARDCORE)  
+<!-- -- COLOR DE LA PAGINA  -->
 -- cambiar los banners del carrusel
 <!-- -- editar el tamaño del footer -->
--- editar estilo y animaciones de menu-opciones 
+<!-- -- editar estilo y animaciones de menu-opciones  -->
 -- cambiar formulario de localizacion
 
 -- formulario de suscripcion funcional(lo mismo que el registro solo visual)
