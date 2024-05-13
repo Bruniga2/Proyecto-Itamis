@@ -278,33 +278,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// document.getElementById('register-form').addEventListener('submit', function(event) {
-//   event.preventDefault();
-
-//   const username = document.getElementById('username').value;
-//   const email = document.getElementById('email').value;
-//   const password = document.getElementById('password').value;
-
-//   // Aquí enviarías los datos a tu servidor o a la API para registrar al usuario
-//   console.log("Usuario Registrado:");
-//   console.log("Nombre de Usuario:", username);
-//   console.log("Correo Electrónico:", email);
-//   console.log("Contraseña:", password);
-// });
-
-// document.getElementById('login-form').addEventListener('submit', function(event) {
-//   event.preventDefault();
-
-//   const loginUsername = document.getElementById('login-username').value;
-//   const loginPassword = document.getElementById('login-password').value;
-
-//   // Aquí enviarías los datos a tu servidor o a la API para autenticar al usuario
-//   console.log("Inicio de Sesión:");
-//   console.log("Nombre de Usuario:", loginUsername);
-//   console.log("Contraseña:", loginPassword);
-// });
-
-
 // CARRITO FUNCIONAL
 const cartInfo = document.querySelector('.cart-dropdown');
 const rowProduct = cartInfo.querySelector('.row-product');

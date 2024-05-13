@@ -31,7 +31,7 @@ function renderizarCarrito() {
   cartItems.innerHTML = ''; // Limpiar el contenido previo del carrito
   let total = 0;
 
-  cart.forEach(item => {
+  cart.forEach((item, index) => {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item-container');
     cartItem.innerHTML = `
@@ -42,15 +42,15 @@ function renderizarCarrito() {
         <h4>${item.nombre}</h4>
         <p class="cart-item-price">Precio: $${item.precio} <span class="discount">-${item.descuento}%</span> = $${item.precio * (1 - item.descuento / 100)}</p>
       </div>
-      <button class="remove-item-btn" data-item="${item.id}">Eliminar</button>
+      <button class="remove-item-btn" data-index="${index}">Eliminar</button>
     `;
     cartItems.appendChild(cartItem);
     total += item.precio * (1 - item.descuento / 100);
 
     // Evento click para eliminar el producto del carrito
     cartItem.querySelector('.remove-item-btn').addEventListener('click', (e) => {
-      const itemId = e.target.dataset.item;
-      cart = cart.filter(item => item.id !== itemId);
+      const itemIndex = e.target.dataset.index;
+      cart.splice(itemIndex, 1);
       actualizarContadorCarrito();
       renderizarCarrito();
     });
@@ -58,7 +58,6 @@ function renderizarCarrito() {
 
   cartTotal.textContent = `$${total.toFixed(2)}`;
 }
-
 
 // Función para vaciar el carrito
 function vaciarCarrito() {
@@ -90,6 +89,56 @@ addToCartButtons.forEach(button => {
   });
 });
 
+function realizarCompra() {
+  // Lógica para procesar el pago y completar la compra
+  // ...
+
+  // Mostrar animación de "Gracias por su compra"
+  const animacion = document.createElement('div');
+  animacion.classList.add('compra-exitosa');
+  animacion.textContent = 'Gracias por su compra!';
+  document.body.appendChild(animacion);
+
+  setTimeout(() => {
+    animacion.classList.add('mostrar');
+  }, 100);
+
+  setTimeout(() => {
+    animacion.classList.remove('mostrar');
+    setTimeout(() => {
+      document.body.removeChild(animacion);
+      cerrarCarrito(); // Cerrar el carrito después de la compra exitosa y la animación
+    }, 500);
+  }, 3000);
+
+  // Vaciar el carrito después de la compra exitosa
+  vaciarCarrito();
+}
+
+
+
+// no perder focus en dropdown-menu
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  dropdownToggle.addEventListener('click', function() {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  dropdownMenu.addEventListener('mouseleave', function() {
+    dropdownMenu.style.display = 'none';
+  });
+});
+
+
+const toggleFilters = document.getElementById('toggle-filters');
+const sidebar = document.getElementById('sidebar');
+
+toggleFilters.addEventListener('click', () => {
+  sidebar.classList.toggle('show');
+});
+
 
 function realizarCompra() {
   // Lógica para procesar el pago y completar la compra
@@ -115,6 +164,3 @@ function realizarCompra() {
   // Vaciar el carrito después de la compra exitosa
   vaciarCarrito();
 }
-
-const realizarCompraButton = document.getElementById('realizar-compra');
-realizarCompraButton.addEventListener('click', realizarCompra);

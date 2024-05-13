@@ -54,3 +54,20 @@ window.addEventListener('scroll', () => {
 });
 
 }
+
+
+
+
+// no perder focus en dropdown-menu
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  dropdownToggle.addEventListener('click', function() {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  dropdownMenu.addEventListener('mouseleave', function() {
+    dropdownMenu.style.display = 'none';
+  });
+});

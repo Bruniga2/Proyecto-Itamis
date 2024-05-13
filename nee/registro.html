@@ -1,70 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de Bebidas</title>
   <link rel="stylesheet" href="estiloregistro.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-************" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-************" crossorigin="anonymous" />
 </head>
+
 <body>
   <header>
-    <div class="top-bar">
-      <div class="logo">LOGO</div>
-      <form>
-        <input type="text" placeholder="¿Qué estás buscando?" class="search-bar">
-      </form>
-      <div class="icons">
-        <a href="#" class="cart-icon">
+    
+
+    <div class="main-header">
+      <a href="inicio.html">
+        <div class="logoinsano">
+          <img src="img/logofinal3.png" alt="logo">
+        </div>
+      </a>
+
+      <div class="buscador">
+        <input class="buscador-input" type="text"
+          placeholder="¿Qué estás buscando?">
+      </div>
+      <div class="icon1">
+        <a href="registro.html" class="cart-icon1">
+          <i class="fas fa-user"></i>
+        </a>
+        <span class="icon-text">Usuario</span>
+      </div>
+      <div class="icon2">
+        <a href="#" class="cart-icon" id="cart-icon">
           <i class="fa fa-shopping-cart"></i>
-        </a>
-        <a href="#" class="user-icon">
-          <i class="fa fa-user"></i>
-        </a>
+          <span id="cart-count">0</span>
+        </a> 
+        <span class="icon-text">Carrito</span>
       </div>
     </div>
     <nav>
       <div class="dropdown">
-        <a href="cervezas.html">CERVEZAS</a>
+        <a href="inicio.html">PAGINA INICIO </a>
+      </div>
+
+      <div class="dropdown">
+        <a href="vinos.html">OFERTAS</a>
         <div class="dropdown-menu">
-          <a href="cervezas.html">Cervezas Premium</a>
-          <a href="cervezas.html">Cervezas Experimentales</a>
-          <a href="cervezas.html">Cervezas Sin Alcohol</a>
+          <a href="vinos.html">Ofertas de La Semana</a>
+          <a href="vinos.html">Recetas</a>
+
         </div>
       </div>
+
+      <div class="dropdown">
+        <a href="cervezas.html">CERVEZAS</a>
+        <div class="dropdown-menu">
+          <a href="cervezas.html">Artesanales </a>
+          <a href="cervezas.html">Nacional </a>
+          <a href="cervezas.html">Importada</a>
+        </div>
+      </div>
+
       <div class="dropdown">
         <a href="vinos.html">VINOS</a>
         <div class="dropdown-menu">
-          <a href="vinos.html">Vinos Tintos</a>
+          <a href="vinos.html">Vinos Tintos </a>
           <a href="vinos.html">Vinos Blancos</a>
-          <a href="vinos.html">Espumantes</a>
+
         </div>
       </div>
-      <!-- Otras secciones -->
+
       <div class="dropdown">
         <a href="destilados.html">DESTILADOS</a>
         <div class="dropdown-menu">
-          <a href="destilados.html">Gin</a>
+          <a href="destilados.html">Whisky</a>
+          <a href="destilados.html">Tequila</a>
           <a href="destilados.html">Pisco</a>
-          <a href="destilados.html">Ron</a>
+          <a href="destilados.html">Gin</a>
           <a href="destilados.html">Vodka</a>
-          <a href="destilados.html">Otros</a>
         </div>
       </div>
+
       <div class="dropdown">
         <a href="licores.html">LICORES</a>
         <div class="dropdown-menu">
-          <a href="licores.html">Licores</a>
+          <a href="licores.html">Mix Cocktails</a>
           <a href="licores.html">Sour</a>
-          <a href="licores.html">Cocteles</a>
+          <a href="licores.html">Variedad Cocktails</a>
         </div>
       </div>
+
       <div class="dropdown">
-        <a href="sinalcohol.html">SIN ALCOHOL</a>
+        <a href="bebidas.html">BEBIDAS</a>
         <div class="dropdown-menu">
-          <a href="sinalcohol.html">Jugos y Nectares</a>
-          <a href="sinalcohol.html">Aguas</a>
-          <a href="sinalcohol.html">Bebidas</a>
+          <a href="bebidas.html">Gaseosa</a>
+          <a href="bebidas.html">Minerales</a>
+          <a href="bebidas.html">Jugos</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="variado.html">VARIADO</a>
+        <div class="dropdown-menu">
+          <a href="variado.html">Jugos y Nectares</a>
+          <a href="variado.html">Aguas</a>
+          <a href="variado.html">Bebidas</a>
         </div>
       </div>
     </nav>
@@ -98,7 +139,8 @@
           <input type="password" id="reg-password" name="reg-password" required>
           <label for="reg-birthdate">Fecha de nacimiento</label>
           <input type="date" id="reg-birthdate" name="reg-birthdate">
-          <p>Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web, gestionar el acceso a tu cuenta y otros propósitos descritos en nuestra política de privacidad.</p>
+          <p>Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web, gestionar
+            el acceso a tu cuenta y otros propósitos descritos en nuestra política de privacidad.</p>
           <button type="submit">REGISTRARSE</button>
         </form>
       </div>
@@ -108,7 +150,7 @@
 
   <br>
 
-</section>
+  </section>
   <section class="banner">
     <div class="banner-inner">
       <img src="img/bannerinsano2.jpg" alt="Banner">
@@ -153,4 +195,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
